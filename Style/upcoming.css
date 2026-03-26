@@ -109,30 +109,28 @@ transition:0.2s;
 .ticket::after {
     content: "";
     position: absolute;
-    top: 65%;
+    top: 63%;
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    background: #f3f4f6; /* same as page bg */
-
-    /* FULL BORDER */
-    border: 2px solid #2ecc71;
+    background: #f3f4f6;
+    border: 2px solid orange;
 }
 
-/* LEFT CUT */
+/* LEFT → INNER CUT (remove inside part) */
 .ticket::before {
-    left: -15px;
+    left: -16px;
 
-    /* hide inner half completely */
-    clip-path: inset(0 50% 0 0);
+    /* hide RIGHT half (inside side) */
+    clip-path: inset(0 0 0 50%);
 }
 
-/* RIGHT CUT */
+/* RIGHT → OUTER CUT (remove outside part) */
 .ticket::after {
-    right: -15px;
+    right: -17px;
 
-    /* hide inner half completely */
-    clip-path: inset(0 0 0 50%);
+    /* hide RIGHT half (outside side) */
+    clip-path: inset(0 50% 0 0);
 }
 
 /* HEADER */
