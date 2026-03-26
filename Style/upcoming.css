@@ -88,14 +88,14 @@ padding:90px 14px 20px;
 text-align:center;
 font-size:18px;
 font-weight:600;
-color:#2e8b57;
+color:orange;
 margin-bottom:12px;
 }
 
 /* TICKET */
 .ticket{
 background:#f7f7f7;
-border:2px solid #2e8b57;
+border:2px solid orange;
 border-radius:20px;
 padding:16px;
 margin-bottom:18px;
@@ -112,6 +112,7 @@ position:absolute;
 top:64%;
 width:28px;
 height:28px;
+border-radius: 30px;
 background:#f7f7f7;
 }
 
@@ -131,6 +132,7 @@ color:#8c5fb3;
 padding:6px 12px;
 border-radius:12px;
 font-size:13px;
+font-weight: bold;
 }
 
 .uts{
@@ -165,7 +167,7 @@ padding: 40px -10px;
 
 /* DIVIDER */
 .divider{
-border-top:1px dashed #2e8b57;
+border-top:1px dashed orange;
 margin:14px 0;
 }
 
