@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<title>Booking Details</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family: system-ui, -apple-system, sans-serif;
+}
+
+body{
+background:#f2f3f5;
+display:flex;
+justify-content:center;
+}
+
+.app{
+width:100%;
+max-width:420px;
+min-height:100vh;
+background:#f2f3f5;
+}
+
+/* TOP BAR */
+.topbar{
+position:fixed;
+top:0;
+left:0;
+right:0;
+height:80px;
+background:#1e6ae1;
+display:flex;
+align-items:center;
+padding:0 15px;
+color:white;
+max-width:420px;
+margin:auto;
+z-index:1000;
+}
+
+.back-btn{
+text-decoration:none;
+color:white;
+width:40px;
+height:40px;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:50%;
+border:2px solid white;
+transition:0.3s;
+margin-right: 20px;
+}
+
+.back-btn i{
+font-size:24px;
+text-align: center;
+transition:0.3s;
+}
+
+.title{
+font-size:20px;
+font-weight:500;
+}
+
+/* CONTENT */
+.content{
+padding:90px 16px 20px;
+}
+
+/* CARD */
+.card{
+background:#a9c6cf;
+border-radius:28px;
+padding:20px;
+position:relative;
+color:#1b1b1b;
+}
+
+/* CUT EFFECT */
+.card::before,
+.card::after{
+content:"";
+position:absolute;
+right:60px;
+width:34px;
+height:34px;
+background:#f2f3f5;
+border-radius:50%;
+}
+
+.card::before{
+top:-17px;
+}
+
+.card::after{
+bottom:-17px;
+}
+
+/* GRID */
+.row{
+display:flex;
+justify-content:space-between;
+margin-bottom:18px;
+}
+
+.label{
+font-size:14px;
+color:#2c2c2c;
+}
+
+.value{
+font-size:18px;
+font-weight:600;
+margin-top:4px;
+}
+
+/* SMALL TEXT */
+.sub{
+color:#5a5a5a;
+font-size:14px;
+}
+
+/* INFO TEXT */
+.info{
+margin-top:25px;
+}
+
+.info p{
+margin-bottom:18px;
+font-size:18px;
+color:#2b2b2b;
+}
+
+.expired{
+color:#7a7a7a;
+font-size:16px;
+margin-bottom:20px;
+}
+
+/* RESPONSIVE */
+@media(max-width:360px){
+.value{font-size:16px;}
+.info p{font-size:16px;}
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="app">
+
+<!-- TOP BAR -->
+<div class="topbar">
+<a href="complete.html" class="back-btn">
+        <i class='bx bx-arrow-back'></i>
+    </a>
+<div class="title">Booking Details</div>
+</div>
+
+<!-- CONTENT -->
+<div class="content">
+
+<!-- CARD -->
+<div class="card">
+
+<div class="row">
+<div>
+<div class="label">JOURNEY</div>
+</div>
+<div class="value">X03ZEB325C</div>
+</div>
+
+<div class="row">
+<div>
+<div class="value">VIRAR</div>
+<div class="sub">Via</div>
+<div class="value">DDR</div>
+</div>
+
+<div style="text-align:right;">
+<div class="value">DOMBIVLI</div>
+<div class="sub">Booked on</div>
+<div class="value">2026-03-09 09:24</div>
+</div>
+</div>
+
+</div>
+
+<!-- INFO -->
+<div class="info">
+
+<div class="expired">Ticket Expired</div>
+
+<p>Passenger(s) : 1 Adult , 0 Child</p>
+
+<p>SECOND | ORDINARY | RETURN | ₹50.00</p>
+
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>

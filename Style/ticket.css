@@ -1,0 +1,368 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto, system-ui, Arial;
+}
+
+body {
+    background: #f3f4f6;
+    display: flex;
+    justify-content: center;
+}
+
+/* APP WIDTH */
+.app {
+    width: 100%;
+    max-width: 420px;
+    background: #f3f4f6;
+    min-height: 100vh;
+}
+
+/* HEADER */
+.header {
+    background: linear-gradient(180deg, #1e6ae1, #1a5bc4);
+    color: white;
+    padding: 18px 16px 20px 16px;
+}
+
+.header-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.left {
+    display: flex;
+    align-items: center;
+}
+
+.back {
+    width: 42px;
+    height: 42px;
+    border: 2px solid white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.back-btn i {
+    font-size: 24px;
+    color: white;
+    text-align: center;
+    margin-top: 2px;
+}
+
+.title {
+    font-size: 22px;
+    font-weight: 500;
+    margin-left: 12px;
+}
+
+.mobile {
+    font-size: 14px;
+    opacity: 0.9;
+    margin-top: 1px;
+    margin-left: 12px;
+}
+
+.share {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.share svg {
+    width: 22px;
+    height: 22px;
+    color: white;
+    font-weight: bold;
+}
+
+/* MESSAGE */
+.msg {
+    background: white;
+    padding: 12px 16px;
+    font-size: 15px;
+    color: #444;
+}
+
+/* DYNAMIC */
+.dynamic {
+    background: #0d0d0d;
+    margin: 14px;
+    border-radius: 16px 16px 0 0;
+    padding: 22px;
+    color: white;
+    text-align: center;
+    position: relative;
+    animation: glow 2.5s infinite alternate;
+    margin-bottom: -11px;
+    overflow: hidden;
+    /* important */
+}
+
+/* TOP PURPLE LINE */
+.dynamic::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 15px;
+    background: #4ff6be;
+}
+
+.dynamic::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+
+    background: linear-gradient(90deg,
+            #4ff6be 0%,
+            #4ff6be 25%,
+            #4ff6be 50%,
+            white 50%,
+            white 100%);
+}
+
+.div {
+    font-size: 17px;
+    margin-top: 15px;
+}
+
+/* TIMER CONTAINER */
+.timer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 48px;
+    font-weight: 700;
+    color: #ff3b30;
+    gap: 6px;
+}
+
+/* digit container */
+.digit {
+    height: 55px;
+    overflow: hidden;
+    position: relative;
+}
+
+/* inner scroll */
+.digit-inner {
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* each number */
+.num {
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.booking-time {
+    font-size: 30px;
+    color: #ff9c00;
+    margin: 8px 0;
+}
+
+/* COMMON STYLE */
+.rail-left,
+.rail-right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) rotate(-90deg);
+    font-size: 18px;
+    letter-spacing: 2px;
+    opacity: 0.8;
+
+    /* Center text properly */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    /* Full length line */
+    width: 240px;
+    /* adjust based on design */
+}
+
+/* LEFT SIDE */
+.rail-left {
+    left: -90px;
+    border-bottom: 3px dashed #ddd;
+    padding-bottom: 10px;
+}
+
+/* RIGHT SIDE */
+.rail-right {
+    right: -90px;
+    transform: translateY(-50%) rotate(-90deg);
+    border-top: 3px dashed #ddd;
+    padding-top: 10px;
+}
+
+/* TICKET */
+.ticket {
+    background: white;
+    margin: 14px;
+    padding: 18px;
+    border-radius: 0 0 22px 22px;
+    position: relative;
+}
+
+.ticket::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 15px;
+    background: #c896f7;
+}
+
+.ticket:before,
+.ticket:after {
+    content: "";
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    background: #f3f4f6;
+    border-radius: 50%;
+    top: 61%;
+    transform: translateY(-50%);
+}
+
+.ticket:before {
+    left: -16px;
+}
+
+.ticket:after {
+    right: -16px;
+}
+
+/* BOTTOM STRIP */
+.bottom-strip {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 15px;
+    background: #4ff6be;
+    border-radius: 0 0 22px 22px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 10px;
+}
+
+.t {
+    font-size: 20px;
+}
+
+.tid {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.station {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.center {
+    color: #888;
+    font-size: 13px;
+}
+
+.label {
+    color: #777;
+    font-size: 14px;
+}
+
+.label2 {
+    color: #777;
+    font-size: 14px;
+    margin-left: 60px;
+}
+
+.label3 {
+    color: black;
+    font-size: 18px;
+    margin-left: 20px;
+}
+
+.price {
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+.passenger {
+    border-top: 1px dashed #ddd;
+    margin-top: 14px;
+    padding-top: 14px;
+}
+
+/* NOTE */
+.note {
+    background: #ffe6e6;
+    margin: 14px;
+    padding: 12px;
+    border-radius: 10px;
+    color: #c43;
+    font-size: 15px;
+    text-align: center;
+}
+
+/* BUTTON */
+.btn {
+    background: #1e6ae1;
+    color: white;
+    margin: 14px;
+    padding: 14px;
+    border-radius: 28px;
+    text-align: center;
+    font-size: 16px;
+}
+
+/* QR */
+.qr {
+    display: flex;
+    justify-content: center;
+    background: rgb(241, 240, 240);
+}
+
+.qr img {
+    width: 240px;
+}
+
+/* INFO */
+.info {
+    background: white;
+    padding: 16px;
+}
+
+.info h3 {
+    margin-bottom: 10px;
+}
+
+.info p {
+    margin: 8px 0;
+    font-size: 15px;
+    color: #444;
+}
