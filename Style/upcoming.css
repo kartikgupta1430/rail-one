@@ -154,6 +154,10 @@ font-size:14px;
 font-weight:600;
 }
 
+span{
+    color: gray;
+}
+
 /* BODY */
 .ticket-body{
 display:flex;
@@ -174,10 +178,27 @@ font-weight:400;
 margin-top:7px;
 }
 
+.label1{
+color:#9a9a9a;
+text-align: right;
+}
+
+.value1{
+font-weight:600;
+text-align: right;
+}
+
+.station1{
+font-weight:400;
+margin-top:7px;
+text-align: right;
+}
+
 .center{
 color:#9a9a9a;
 font-size: 10px;
-padding: 48px
+padding: 48px;
+padding-right: 20px;
 }
 
 /* DIVIDER */
