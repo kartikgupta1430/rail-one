@@ -10,6 +10,7 @@ body {
     background: #f3f4f6;
     display: flex;
     justify-content: center;
+    font-family: 'Roboto', sans-serif;
 }
 
 /* APP WIDTH */
@@ -128,11 +129,10 @@ body {
     height: 5px;
 
     background: linear-gradient(90deg,
-            #4ff6be 0%,
-            #4ff6be 25%,
-            #4ff6be 50%,
-            white 50%,
-            white 100%);
+#4ff6be 0%,
+        #4ff6be 5%,   /* only 10% fill */
+        white 5%,
+        white 100%)
 }
 
 .div {
@@ -149,6 +149,7 @@ body {
     font-weight: 700;
     color: #ff3b30;
     gap: 6px;
+    margin-top: 18px;
 }
 
 /* digit container */
@@ -185,9 +186,10 @@ body {
     position: absolute;
     top: 50%;
     transform: translateY(-50%) rotate(-90deg);
-    font-size: 18px;
+    
     letter-spacing: 2px;
     opacity: 0.8;
+    color: rgb(169, 169, 169);
 
     /* Center text properly */
     display: flex;
@@ -202,17 +204,21 @@ body {
 
 /* LEFT SIDE */
 .rail-left {
-    left: -90px;
+    left: -95px;
     border-bottom: 3px dashed #ddd;
-    padding-bottom: 10px;
+    padding-bottom: 8px;
+    font-weight: bold;
+    font-size: 17px;
 }
 
 /* RIGHT SIDE */
 .rail-right {
-    right: -90px;
+    right: -95px;
     transform: translateY(-50%) rotate(-90deg);
     border-top: 3px dashed #ddd;
-    padding-top: 10px;
+    padding-top: 8px;
+    font-weight: bold;
+    font-size: 18px;
 }
 
 /* TICKET */
@@ -242,7 +248,7 @@ body {
     height: 32px;
     background: #f3f4f6;
     border-radius: 50%;
-    top: 61%;
+    top: 61.5%;
     transform: translateY(-50%);
 }
 
@@ -282,7 +288,7 @@ body {
 
 .station {
     font-size: 18px;
-    font-weight: 600;
+    font-weight: 405;
 }
 
 .center {
@@ -292,13 +298,13 @@ body {
 
 .label {
     color: #777;
-    font-size: 14px;
+    font-size: 18px;
 }
 
 .label2 {
     color: #777;
-    font-size: 14px;
-    margin-left: 60px;
+    font-size: 18px;
+    margin-left: 45px;
 }
 
 .label3 {
@@ -345,16 +351,20 @@ body {
     display: flex;
     justify-content: center;
     background: rgb(241, 240, 240);
+     margin-bottom: 10px;
 }
 
 .qr img {
     width: 240px;
+   
 }
 
 /* INFO */
 .info {
     background: white;
     padding: 16px;
+    margin-bottom: 50px;
+    margin-top: 10px;
 }
 
 .info h3 {
