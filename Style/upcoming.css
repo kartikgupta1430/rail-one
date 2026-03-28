@@ -2,7 +2,7 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family: system-ui, -apple-system, sans-serif;
+font-family: 'Bahnschrift', sans-serif;
 }
 
 body{
@@ -224,11 +224,6 @@ font-weight: bold;
 transition:0.2s;
 }
 
-.ticket-actions a:hover{
-color:#0d47a1;
-text-decoration:underline;
-}
-
 /* NAV */
 .tabs{
 position:fixed;
@@ -261,7 +256,7 @@ display:flex;
 justify-content:space-around;
 padding:10px 5px;
 border-radius:26px 26px 0 0;
-border: 2px solid lightgray;
+border: 1px solid lightgray;
 }
 
 /* EACH TAB */
@@ -299,7 +294,8 @@ color:#1a3a7a;
 /* ✅ ACTIVE (ADDED ONLY) */
 .tab.active{
     width: 80px;
-background:rgb(255, 255, 255);
+background:#f6fcff;
+
 }
 
 .tab.active p{

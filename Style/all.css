@@ -96,8 +96,8 @@ margin-bottom:12px;
 .ticket{
 background:#f7f7f7;
 border:2px solid #2e8b57;
-border-radius:20px;
-padding:16px;
+border-radius:9px;
+padding:10px;
 margin-bottom:18px;
 position:relative;
 transition:0.2s;
@@ -106,17 +106,32 @@ transition:0.2s;
 
 
 .ticket::before,
-.ticket::after{
-content:"";
-position:absolute;
-top:64%;
-width:28px;
-height:28px;
-background:#f7f7f7;
+.ticket::after {
+    content: "";
+    position: absolute;
+    top: 63%;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #f3f4f6;
+    border: 2px solid #2e8b57;
 }
 
-.ticket::before{ left:-14px; }
-.ticket::after{ right:-14px; }
+/* LEFT → INNER CUT (remove inside part) */
+.ticket::before {
+    left: -19px;
+
+    /* hide RIGHT half (inside side) */
+    clip-path: inset(0 0 0 50%);
+}
+
+/* RIGHT → OUTER CUT (remove outside part) */
+.ticket::after {
+    right: -19px;
+
+    /* hide RIGHT half (outside side) */
+    clip-path: inset(0 50% 0 0);
+}
 
 /* HEADER */
 .ticket-header{
@@ -131,11 +146,16 @@ color:#8c5fb3;
 padding:6px 12px;
 border-radius:12px;
 font-size:13px;
+font-weight: bold;
 }
 
 .uts{
 font-size:14px;
 font-weight:600;
+}
+
+span{
+    color: gray;
 }
 
 /* BODY */
@@ -155,18 +175,37 @@ font-weight:600;
 
 .station{
 font-weight:400;
-margin-top:4px;
+margin-top:7px;
+}
+
+.label1{
+color:#9a9a9a;
+text-align: right;
+}
+
+.value1{
+font-weight:600;
+text-align: right;
+}
+
+.station1{
+font-weight:400;
+margin-top:7px;
+text-align: right;
 }
 
 .center{
 color:#9a9a9a;
-padding: 40px -10px;
+font-size: 10px;
+padding: 48px;
+padding-right: 20px;
 }
 
 /* DIVIDER */
 .divider{
 border-top:1px dashed #2e8b57;
 margin:14px 0;
+margin-top: -30px;
 }
 
 /* ACTIONS */
@@ -174,6 +213,7 @@ margin:14px 0;
 display:flex;
 justify-content:space-between;
 padding:0 45px;
+margin-bottom: 6px;
 }
 
 .ticket-actions a{
@@ -221,7 +261,7 @@ display:flex;
 justify-content:space-around;
 padding:10px 5px;
 border-radius:26px 26px 0 0;
-border: 2px solid grey;
+border: 1px solid lightgray;
 }
 
 /* EACH TAB */

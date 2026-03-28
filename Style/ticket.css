@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Roboto, system-ui, Arial;
+    font-family: 'Bahnschrift', sans-serif;
 }
 
 body {
@@ -117,7 +117,7 @@ body {
     left: 0;
     width: 100%;
     height: 15px;
-    background: rgb(167, 121, 214);
+    background: #8a7af1;
 }
 
 .dynamic::after {
@@ -129,8 +129,8 @@ body {
     height: 5px;
 
     background: linear-gradient(90deg,
-rgb(167, 121, 214) 0%,
-        rgb(167, 121, 214) 50%,   /* only 10% fill */
+#8a7af1 0%,
+        #8a7af1 50%,   /* only 10% fill */
         white 50%,
         white 100%)
 }
@@ -237,7 +237,7 @@ rgb(167, 121, 214) 0%,
     left: 0;
     width: 100%;
     height: 15px;
-    background: #c896f7;
+    background: #8a7af1;
 }
 
 .ticket:before,
@@ -267,7 +267,7 @@ rgb(167, 121, 214) 0%,
     left: 0;
     width: 100%;
     height: 15px;
-    background:rgb(167, 121, 214);
+    background:#8a7af1;
     border-radius: 0 0 22px 22px;
 }
 
@@ -280,6 +280,7 @@ rgb(167, 121, 214) 0%,
 .t {
     font-size: 18px;
     margin-top: -20px;
+    font-weight: lighter;
 }
 
 .tid {
@@ -322,6 +323,7 @@ rgb(167, 121, 214) 0%,
 .price {
     margin-top: 10px;
     font-size: 15px;
+    font-weight: lighter;
 }
 
 .passenger {
