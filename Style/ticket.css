@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Bahnschrift', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 body {
@@ -280,7 +280,6 @@ body {
 .t {
     font-size: 18px;
     margin-top: -20px;
-    font-weight: lighter;
 }
 
 .tid {
