@@ -47,3 +47,19 @@ function move(id, value) {
 
 updateTimer();
 let timerInterval = setInterval(updateTimer, 1000);
+
+
+
+function replaceFour(node) {
+    if (node.nodeType === 3) {
+        node.nodeValue = node.nodeValue.replace(/4/g, '§4§');
+    } else {
+        node.childNodes.forEach(replaceFour);
+    }
+}
+
+replaceFour(document.body);
+
+document.body.innerHTML = document.body.innerHTML.replace(/§4§/g,
+    '<span class="four">4</span>');
+    

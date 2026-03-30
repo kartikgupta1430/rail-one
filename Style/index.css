@@ -31,26 +31,15 @@ right:0;
 background:white;
 z-index:1000;
 width:100%;
+height:50px;
 max-width:420px;
 margin:auto;
 border-radius: 25px 25px 25px 25px;
 }
 
-.circle{
-width:42px;
-height:42px;
-border-radius:50%;
-border:2px solid #e5e5e5;
-display:flex;
-align-items:center;
-justify-content:center;
-font-weight:600;
-color:#1a3a7a;
-}
-
 .custom-icon1{
-width: 45px;        /* PERFECT SIZE */
-height: 45px;       /* PERFECT SIZE */
+width: 42px;        /* PERFECT SIZE */
+height: 40px;       /* PERFECT SIZE */
 }
 
 .logo{
@@ -65,10 +54,7 @@ height: 45px;       /* PERFECT SIZE */
     object-fit:contain;
 }
 
-.bell{
-position:relative;
-font-size:20px;
-}
+
 
 .badge{
 position:absolute;
@@ -87,17 +73,18 @@ justify-content:center;
 
 .hello{
 padding:0  16px;
-margin-top:115px;
+margin-top:90px;
 color:#1a3a7a;
-font-size:13px;
+font-size:10px;
+font-weight:450;
 }
 
 /* SECTION TITLE */
 .section-title{
-font-size:17px;
+font-size:15px;
 font-weight:700;
 color:#1a3a7a;
-margin: 2px 8px 2px;
+margin: 2px 2px 2px;
 }
 
 /* GRID */
@@ -108,23 +95,12 @@ gap:20px 10px;
 padding:0 12px;
 }
 
-/* ITEM */
+/* ITEM-P */
 .offer-item{
 text-align:center;
-font-size:14px;
+font-size:12px;
 color:#23376b;
-}
-
-/* ICON BOX (IMPORTANT FIX) */
-.icon{
-width:70px;
-height:64px;
-border-radius:18px;
-display:flex;
-align-items:center;
-justify-content:center;
-margin:0 auto 8px;
-overflow:hidden; /* keeps image inside */
+font-weight:
 }
 
 /* IMAGE ICON (FIXED SIZE) */
@@ -134,33 +110,18 @@ height: 80px;       /* PERFECT SIZE */
 object-fit:contain;
 }
 
-/* REMOVE OLD ICON SIZE ISSUE */
-.icon i{
-display:none; /* hides boxicons if still present */
-}
-
-/* COLORS (CLEANED - no duplicates) */
-.pink{ background:#f6dbe4; }
-.green{ background:#dff2e1; }
-.blue{ background:#dcecf7; }
-.yellow{ background:#f5e9ce; }
-.purple{ background:#d7d6f1; }
-.grey{ background:#e6e6e6; }
-.red{ background:#f3d6d6; }
-.dark{ background:#63678a; color:white; }
-
 /* HEADINGS */
 h2{
-padding:17px;
+padding:13px;
 color:#1a3a7a;
-font-size: 19px;
+font-size: 15px;
 }
 
 /* JOURNEY */
 .planner{
 display:flex;
 gap:12px;
-padding:0 15px;
+padding:0 10px;
 width: 100%;
 }
 
@@ -174,6 +135,13 @@ height:103px;
 border-radius:18px;
 object-fit:cover;
 }
+.plan p{
+font-size:14px;
+color:#1a3a7a;
+font-weight:300;
+}
+
+
 
 /* GRID */
 .grid{
@@ -245,14 +213,15 @@ color:white;
 }
 
 .nlogo{
-width: 40px;        /* PERFECT SIZE */
-height: 30px;       /* PERFECT SIZE */
+width: 35px;        /* PERFECT SIZE */
+height: 25px;       /* PERFECT SIZE */
 }
 
 .nav{
 text-align:center;
-font-size:12px;
+font-size:10px;
 text-decoration: none;
+color:lightblue;
 }
 
 .nav i{

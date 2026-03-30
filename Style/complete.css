@@ -2,7 +2,7 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family: system-ui, -apple-system, sans-serif;
+font-family: 'Bahnschrift', sans-serif;
 }
 
 body{
@@ -24,7 +24,7 @@ position:fixed;
 top:0;
 left:0;
 right:0;
-height:80px;
+height:70px;
 background:#1466ff;
 display:flex;
 align-items:center;
@@ -36,7 +36,7 @@ z-index:1000;
 }
 
 .topbar h2{
-font-size:21px;
+font-size:18px;
 font-weight:500;
 margin-right: auto;
 
@@ -58,27 +58,18 @@ margin-right: 20px;
 }
 
 /* ICON SIZE */
-.back-btn i{
-font-size:24px;
-text-align: center;
-transition:0.3s;
+.fi2{
+width: 60px;        /* PERFECT SIZE */
+height: 60px;
+text-decoration: none;
+
 }
 .fi{
-width: 50px;        /* PERFECT SIZE */
-height: 50px; 
+width: 40px;        /* PERFECT SIZE */
+height: 40px;
 }
 
-/* 🔥 HOVER FIX (IMPORTANT) */
-.back-btn:hover,
-.filter-icon:hover{
-background:white;
-}
 
-/* CHANGE ICON COLOR ON HOVER */
-.back-btn:hover i,
-.filter-icon:hover i{
-color:#1e6ae1;
-}
 /* CONTENT */
 .content{
 padding:90px 14px 20px;
@@ -86,21 +77,20 @@ padding:90px 14px 20px;
 
 .status{
 text-align:center;
-font-size:18px;
-font-weight:600;
+font-size:15px;
+font-weight:400;
 color:#2e8b57;
-margin-bottom:12px;
+margin-top:-10px;
 }
 
 /* TICKET */
 .ticket{
 background:#f7f7f7;
-border:2px solid #2e8b57;
+border:1px solid #2e8b57;
 border-radius:9px;
 padding:10px;
-margin-bottom:18px;
+margin-top:10px;
 position:relative;
-transition:0.2s;
 }
 
 
@@ -114,12 +104,12 @@ transition:0.2s;
     height: 30px;
     border-radius: 50%;
     background: #f3f4f6;
-    border: 2px solid #2e8b57;
+    border: 1px solid #2e8b57;
 }
 
 /* LEFT → INNER CUT (remove inside part) */
 .ticket::before {
-    left: -19px;
+    left: -18px;
 
     /* hide RIGHT half (inside side) */
     clip-path: inset(0 0 0 50%);
@@ -127,7 +117,7 @@ transition:0.2s;
 
 /* RIGHT → OUTER CUT (remove outside part) */
 .ticket::after {
-    right: -19px;
+    right: -18px;
 
     /* hide RIGHT half (outside side) */
     clip-path: inset(0 50% 0 0);
@@ -145,12 +135,12 @@ background:#ead8f6;
 color:#8c5fb3;
 padding:6px 12px;
 border-radius:12px;
-font-size:13px;
+font-size:11px;
 font-weight: bold;
 }
 
 .uts{
-font-size:14px;
+font-size:12px;
 font-weight:600;
 }
 
@@ -162,7 +152,7 @@ span{
 .ticket-body{
 display:flex;
 justify-content: space-between;
-font-size: 14px;
+font-size: 11px;
 }
 
 .label{
@@ -171,11 +161,12 @@ color:#9a9a9a;
 
 .value{
 font-weight:600;
+margin-top: 5px;
 }
 
 .station{
 font-weight:400;
-margin-top:7px;
+margin-top:10px;
 }
 
 .label1{
@@ -186,17 +177,18 @@ text-align: right;
 .value1{
 font-weight:600;
 text-align: right;
+margin-top: 5px;
 }
 
 .station1{
 font-weight:400;
-margin-top:7px;
+margin-top:10px;
 text-align: right;
 }
 
 .center{
 color:#9a9a9a;
-font-size: 10px;
+font-size: 9px;
 padding: 48px;
 padding-right: 20px;
 }
@@ -218,34 +210,9 @@ margin-bottom: 6px;
 
 .ticket-actions a{
 text-decoration:none;
-color:#1e6ae1;
-font-size:16px;
-font-weight: bold;
-transition:0.2s;
-}
-
-.ticket-actions a:hover{
-color:#0d47a1;
-text-decoration:underline;
-}
-
-
-/* NAV */
-.tabs{
-position:fixed;
-bottom:0;
-left:0;
-right:0;
-width:100%;              /* responsive */
-max-width:420px;
-margin:auto;
-background:#d9e5f0;
-display:flex;
-padding:10px 5px;
-border-radius:26px 26px 0 0;
-justify-content:space-around;
-align-items:center;      /* center items vertically */
-z-index:1000;
+color:#1466ff;
+font-size:15px;
+font-weight:500;
 }
 
 /* NAV */
@@ -262,7 +229,7 @@ display:flex;
 justify-content:space-around;
 padding:10px 5px;
 border-radius:26px 26px 0 0;
-border: 1px solid lightgray;
+border: 2px solid lightgray;
 }
 
 /* EACH TAB */
@@ -285,8 +252,8 @@ background:#ffffff80;
 
 /* ICON IMAGE */
 .nlogo{
-width:50px;
-height:50px;
+width:40px;
+height:40px;
 object-fit:contain;
 }
 
@@ -294,17 +261,18 @@ object-fit:contain;
 .tab p{
 font-size:12px;
 margin:0;
-color:#1a3a7a;
+color:gray;
 }
 
 /* ✅ ACTIVE (ADDED ONLY) */
 .tab.active{
     width: 80px;
-background:#ffffff;
+background:#f6fcff;
+
 }
 
 .tab.active p{
-color:#1e6ae1;
+color:gray;
 }
 /* RESPONSIVE */
 @media (max-width:360px){

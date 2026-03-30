@@ -3,14 +3,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Bahnschrift', sans-serif;
 }
 
 body {
     background: #f3f4f6;
     display: flex;
     justify-content: center;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Bahnschrift', sans-serif;
 }
 
 /* APP WIDTH */
@@ -23,7 +23,7 @@ body {
 
 /* HEADER */
 .header {
-    background: linear-gradient(180deg, #1e6ae1, #1a5bc4);
+    background: #1466ff;
     color: white;
     padding: 18px 16px 20px 16px;
 }
@@ -57,16 +57,23 @@ body {
     margin-top: 2px;
 }
 
+.fi2{
+width: 71px;        /* PERFECT SIZE */
+height: 71px;
+margin-top: 6px;
+text-decoration: none;
+}
+
 .title {
-    font-size: 22px;
+    font-size: 17px;
     font-weight: 500;
     margin-left: 12px;
 }
 
 .mobile {
-    font-size: 14px;
+    font-size: 10px;
     opacity: 0.9;
-    margin-top: 1px;
+    margin-top: 3px;
     margin-left: 12px;
 }
 
@@ -90,8 +97,9 @@ body {
 .msg {
     background: white;
     padding: 12px 16px;
-    font-size: 15px;
-    color: #444;
+    font-size: 12px;
+    font-weight:300;
+    color: grey;
 }
 
 /* DYNAMIC */
@@ -136,8 +144,10 @@ body {
 }
 
 .div {
-    font-size: 17px;
-    margin-top: 15px;
+    font-size: 16px;
+    margin-top: 8px;
+    color:white;
+        letter-spacing: 1px;
 }
 
 /* TIMER CONTAINER */
@@ -145,11 +155,17 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 48px;
+    font-size: 36px;
     font-weight: 700;
     color: #ff3b30;
     gap: 6px;
-    margin-top: 18px;
+    margin-top: 8px;
+}
+
+.tb{
+font-size: 12px;
+color:gray;
+margin-top: 5px;
 }
 
 /* digit container */
@@ -175,18 +191,35 @@ body {
 }
 
 .booking-time {
-    font-size: 30px;
+    font-size: 24px;
+    font-weight:450;
     color: #ff9c00;
-    margin: 8px 0;
+    margin: 6px 0;
+    letter-spacing: 1px;
 }
 
+.sort{
+font-size:11px;
+margin-top:6px;
+color:rgb(249, 242, 228);
+font-weight:300;
+letter-spacing: 1px;
+}
+
+.sort1{
+font-size:11px;
+margin-top:1px;
+color:rgb(249, 242, 228);
+font-weight:300;
+letter-spacing: 1px;
+}
 /* COMMON STYLE */
 .rail-left,
 .rail-right {
     position: absolute;
     top: 50%;
     transform: translateY(-50%) rotate(-90deg);
-    
+
     letter-spacing: 2px;
     opacity: 0.8;
     color: rgb(169, 169, 169);
@@ -199,33 +232,59 @@ body {
 
     /* Full length line */
     width: 240px;
-    /* adjust based on design */
 }
 
 /* LEFT SIDE */
 .rail-left {
-    left: -95px;
-    border-bottom: 3px dashed #ddd;
-    padding-bottom: 8px;
+    left: -100px;
+    padding-bottom: 6px;
     font-weight: bold;
-    font-size: 17px;
+    font-size: 13px;
+
+    /* REMOVE default border */
+    border-bottom: none;
+
+    /* CUSTOM DASHED LINE */
+    background: repeating-linear-gradient(
+        to right,
+        #ddd 0px,
+        #ddd 10px,        /* dash size */
+        transparent 6px,
+        transparent 12px /* gap */
+    );
+    background-size: 90.5% 1.5px; /* thin line */
+    background-position: left bottom ;
+    background-repeat: no-repeat;
 }
 
 /* RIGHT SIDE */
 .rail-right {
-    right: -95px;
-    transform: translateY(-50%) rotate(-90deg);
-    border-top: 3px dashed #ddd;
-    padding-top: 8px;
+    right: -100px;
+    padding-top: 6px;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 16px;
+
+    /* REMOVE default border */
+    border-top: none;
+
+    /* CUSTOM DASHED LINE */
+    background: repeating-linear-gradient(
+        to right,
+        #ddd 0px,
+        #ddd 10px,
+        transparent 6px,
+        transparent 12px
+    );
+    background-size: 90.5% 1.5px; /* thin line */
+    background-position: left top;
+    background-repeat: no-repeat;
 }
 
 /* TICKET */
 .ticket {
     background: white;
-    margin: 14px;
-    padding: 18px;
+    margin: 15px;
+    padding: 1px;
     border-radius: 0 0 22px 22px;
     position: relative;
 }
@@ -237,7 +296,7 @@ body {
     left: 0;
     width: 100%;
     height: 15px;
-    background: #8a7af1;
+    background: #c896f7;
 }
 
 .ticket:before,
@@ -248,7 +307,7 @@ body {
     height: 32px;
     background: #f3f4f6;
     border-radius: 50%;
-    top: 83.5%;
+    top: 82.5%;
     transform: translateY(-50%);
 }
 
@@ -267,7 +326,7 @@ body {
     left: 0;
     width: 100%;
     height: 15px;
-    background:#8a7af1;
+    background:  #8a7af1;
     border-radius: 0 0 22px 22px;
 }
 
@@ -278,26 +337,31 @@ body {
 }
 
 .t {
-    font-size: 18px;
-    margin-top: -20px;
+    font-size: 15px;
+    padding: -10px;
+    margin-bottom: 12px;
 }
 
 .tid {
-    font-size: 16px;
-    font-weight: bold;
-    margin-top: -20px;
+    font-size: 14px;
+    font-weight: 490;
+    margin-bottom: 12px;
+}
+
+.station {
+    color: black;
+    font-size: 14px;
+    text-align: right;
 }
 
 .center {
     color: #888;
-    font-size: 13px;
-    margin-top: 12px;
+    font-size: 11px;
 }
 
 .label {
     color: #777;
     font-size: 14px;
-    text-align: left;
 }
 
 .label2 {
@@ -308,33 +372,28 @@ body {
 
 .label3 {
     color: black;
-    font-size: 16px;
-    text-align: right;
-    margin-top: 10px;
-}
-
-.label4 {
-    font-size: 16px;
-    margin-top: 10px;
+    font-size: 14px;
     text-align: left;
 }
 
-.price {
-    margin-top: 10px;
-    font-size: 15px;
-    font-weight: lighter;
+.price p{
+    margin-top: 0px;
+    margin-left: 10px;
+    font-size: 12.5px;
+    font-weight: 400;
 }
 
 .passenger {
     border-top: 1px dashed #ddd;
     margin-top: 14px;
-    padding-top: 14px;  
+    padding-top: 14px;
 }
-.valid{
-     font-size: 12px;
-    font-weight: lighter;
-    color: gray;
-    margin-bottom: 8px;
+
+.valid {
+    font-size: 11px;
+    color: #777;
+    margin-left: 10px;text-align: left;
+    margin-bottom: 20px;
 }
 
 /* NOTE */
@@ -344,20 +403,21 @@ body {
     padding: 12px;
     border-radius: 10px;
     color: #c43;
-    font-size: 15px;
+    font-size: 14px;
     text-align: center;
 }
 
 /* BUTTON */
 .btn {
-    background:white;
+    background: white;
     color: #1e6ae1;
     margin: 14px;
     padding: 14px;
-    border: 1px solid #1e6ae1;
     border-radius: 28px;
+    border: 1px solid #1e6ae1;
     text-align: center;
-    font-size: 16px;
+    font-size: 14px;
+    letter-spacing: 1px;
 }
 
 /* QR */
@@ -383,10 +443,11 @@ body {
 
 .info h3 {
     margin-bottom: 10px;
+    font-size:14px;
 }
 
 .info p {
     margin: 8px 0;
-    font-size: 16px;
+    font-size: 12px;
     color: #444;
 }
